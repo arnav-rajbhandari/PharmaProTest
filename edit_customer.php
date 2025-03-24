@@ -3,36 +3,36 @@
 <head>
   <title>Edit Customer</title>
   <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
-  <link rel="stylesheet" type="text/css" href="style-test.css">
+  <link rel="stylesheet" type="text/css" href="css/customer.css">
 </head>
 <body>
   <script src="script.js"></script>
-  <div class="depth-0">
-    <div class="nav-depth-1">
-      <div class="nav-depth-2">
+  <div class="customer-depth-0">
+    <div class="customer-nav-depth-1">
+      <div class="customer-nav-depth-2">
         <div class="customer-nav-depth-3-links">
           <div class="customer-nav-depth-4-logo">
-            <a href="#"><img src="home.png" class="home-logo-img"></a>
+            <a href="dashboard.php"><img src="home.png" class="home-logo-img"></a>
           </div>
-          <div class="nav-depth-4-links">
-            <ul class="nav-links">
+          <div class="customer-nav-depth-4-links">
+            <ul class="customer-nav-links">
               <li><a href="add_customer.php">Add Customer</a></li>
               <li><a href="view_customer.php">View Customer</a></li>
               <li><a href="edit_customer.php">Edit Customer</a></li>
             </ul>
           </div>
         </div>
-        <div class="nav-depth-3-logout">
+        <div class="customer-nav-depth-3-logout">
           <a href="login.php">Log out</a>
         </div>
       </div>
     </div>
 
-    <div class="container-depth-1">
-      <div class="container-depth-2-head">
-        <h1>Edit customer data</h1>
+    <div class="customer-container-depth-1">
+      <div class="customer-container-depth-2-head">
+        <h1>Edit Customer Data</h1>
       </div>
-      <div class="container-depth-2-form">
+      <div class="customer-container-depth-2-form">
         <?php
         include 'db_connect.php';
 
@@ -49,7 +49,7 @@
           }
         }
 
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['update'])) {
           $cid = $_POST['cid'];
           $c_name = $_POST['customer-name'];
           $c_contact = $_POST['phone-number'];
@@ -62,15 +62,25 @@
             echo '<script>alert("Record edited successfully.");</script>';
             header("Location: view_customer.php");
             exit;
-            
-        	
-
           } else {
             echo "Error updating record: " . mysqli_error($conn);
           }
-
-          mysqli_close($conn);
         }
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete'])) {
+          $cid = $_POST['cid'];
+          $sql = "DELETE FROM customer WHERE cid=$cid";
+
+          if (mysqli_query($conn, $sql)) {
+            echo '<script>alert("Record deleted successfully.");</script>';
+            header("Location: view_customer.php");
+            exit;
+          } else {
+            echo "Error deleting record: " . mysqli_error($conn);
+          }
+        }
+
+        mysqli_close($conn);
         ?>
         <form class="add-customer-form" method="post" action="edit_customer.php?cid=<?php echo $row['cid']; ?>">
           <input type="hidden" name="cid" value="<?php echo $row['cid']; ?>">
@@ -90,7 +100,8 @@
             <label for="doctor-name">Doctor's Name</label>
             <input type="text" id="doctor-name" name="doctor-name" value="<?php echo $row['doctor_name']; ?>">
           </div>
-          <button class="button-add-customer" type="submit">Edit Customer</button>
+          <button class="button-add-customer" type="submit" name="update">Edit Customer</button>
+          <button class="button-delete-customer" type="submit" name="delete">Delete Customer</button>
         </form>
       </div>
     </div>

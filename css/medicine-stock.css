@@ -1,0 +1,257 @@
+/* General styles */
+body {
+    font-family: 'Manrope';
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* Smooth loading */
+body.loaded {
+    opacity: 1;
+}
+
+body, html {
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.home-logo-img {
+    width: 10%;
+    display: block;
+    margin-bottom: 20px;
+}
+
+
+.table-wrapper {
+    height: 100% ; /* Adjust this value based on your row height to show exactly 7 rows */
+    overflow-y: auto;
+}
+
+.button-add-medicine {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+    
+}
+
+.button-add-medicine:hover {
+    background-color: #0056b3;
+}
+
+
+.medicine-stock-depth-0 {
+    padding: 10px;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.medicine-stock-nav-depth-1 {
+    width: 25%;
+    margin: 0;
+    padding: 10px;
+    padding-left: 50px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.medicine-stock-container-depth-1 {
+    width: 75%;
+    margin: 0 0 5% 0;
+    padding: 20px;
+    box-sizing: border-box;
+
+}
+
+.medicine-stock-nav-depth-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.medicine-stock-nav-depth-3-links {
+    width: 95%;
+    margin-top: 25px;
+    padding: 20px;
+}
+
+.medicine-stock-nav-depth-3-logout {
+    width: 100%;
+    align-self: flex-start;
+    margin-bottom: 50px;
+    padding: 5px 10px;
+}
+
+.medicine-stock-nav-depth-3-logout a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #000000;
+    padding: 5px 10px;
+    display: block;
+    width: 100%;
+}
+
+.medicine-stock-nav-depth-3-logout a:hover {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.medicine-stock-nav-depth-4-logo {
+    width: 100%;
+}
+
+.medicine-stock-nav-depth-4-links ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.medicine-stock-nav-depth-4-links ul li {
+    margin-bottom: 10px;
+}
+
+.medicine-stock-nav-depth-4-links ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: black;
+    padding: 5px 10px;
+    display: block;
+}
+
+.medicine-stock-nav-depth-4-links ul li a:hover {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+/* add medicine */
+.medicine-stock-container-depth-2-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.form-field-add-medicine {
+    margin-bottom: 10px;
+}
+
+.add-medicine-stock-form {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.form-field-add-medicine label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-field-add-medicine input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 50%;
+    color: #000;
+}
+
+.form-field-add-medicine input::placeholder {
+    color: rgba(0, 0, 0, 0.5); /* set placeholder text color to 50% opacity */
+}
+
+
+
+/* View medicine */
+.medicine-stock-container-depth-2-head-med {
+    margin-bottom: 20px;
+    margin-top: 25px;
+}
+
+.medicine-stock-container-depth-2-head-med h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #000;
+}
+
+.medicine-stock-container-depth-2-search-med {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.medicine-stock-container-depth-2-content-med {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 5%;
+    height: 30%;
+}
+
+.medicine-stock-container-depth-2-content-med table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.medicine-stock-container-depth-2-content-med table th,
+.medicine-stock-container-depth-2-content-med table td {
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    height: 5%;
+}
+
+.medicine-stock-container-depth-2-content-med table th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+}
+
+.medicine-stock-container-depth-2-content-med table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.medicine-stock-container-depth-2-content-med table td a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.medicine-stock-container-depth-2-content-med table td a:hover {
+    text-decoration: underline;
+}
+
+
+.button-select-medicine {
+    background-color: #007bff; /* Blue background color */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* No border */
+    border-radius: 20px; /* Rounded corners */
+    font-size: 12px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.button-select-medicine:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.button-delete-medicine-stock {
+    padding: 10px 20px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-delete-medicine-stock:hover {
+    background-color: #d93636;
+}

@@ -1,0 +1,528 @@
+/* General styles */
+body {
+    font-family: 'Manrope';
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+     opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* Smooth loading */
+
+body.loaded {
+    opacity: 1;
+}
+
+body, html {
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.depth-0 {
+    padding: 10px;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.nav-depth-1 {
+    width: 25%;
+    margin: 0;
+    padding: 10px;
+    padding-left: 50px ;
+    background-color: #fff;
+    
+    box-sizing: border-box;
+}
+
+.container-depth-1 {
+    width: 75%;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.nav-depth-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+}
+
+.nav-depth-3-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 95%;
+    padding: 20px;
+}
+
+.nav-depth-3-logout {
+	width: 100%;
+    align-self: flex-start;
+    margin-bottom: 50px;
+    padding: 5px 10px;
+
+}
+
+.nav-depth-3-logout a{
+	text-decoration: none;
+	font-size: 1.2rem;
+	color: #000000;
+	padding: 5px 10px;
+    display: block;
+	width: 100%;
+}
+
+.nav-depth-3-logout a:hover {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.nav-depth-4-links{
+	width: 100%;
+}
+
+.nav-depth-4-links ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.nav-depth-4-links ul li {
+    margin-bottom: 10px;
+
+}
+
+.nav-depth-4-links ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: black;
+    padding: 5px 10px;
+    display: block;
+
+}
+
+.nav-depth-4-links ul li a:hover {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.dash-logo-img {
+    width: 40%; /* Set the width to 50% of its parent */
+    display: block;
+    margin-bottom: 20px;
+}
+
+
+
+/* Container styles */
+.container-depth-2-head {
+    margin-bottom: 20px;
+    margin-top:25px ;
+}
+
+.container-depth-2-head h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #000;
+}
+
+.container-depth-2-tiles {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.container-depth-2-tiles div {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 20%;
+    text-align: left;
+}
+
+.container-depth-2-tiles div h2 {
+    margin: 0;
+    font-size: 16px;
+    color: #666;
+}
+
+.container-depth-2-tiles div p {
+    margin: 5px 0 0 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.container-depth-2-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-depth-2-content table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.container-depth-2-content table th,
+.container-depth-2-content table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.container-depth-2-content table th {
+    background-color: #f9f9f9;
+    font-weight: normal;
+}
+
+.container-depth-2-content table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.container-depth-2-content table td a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.container-depth-2-content table td a:hover {
+    text-decoration: underline;
+}
+
+
+/* Login Page */
+.login-body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    text-align: center;
+    height: 60%;
+}
+
+.login-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo-img {
+    width: 15%;
+    margin-right: 10px;
+}
+
+.login-form{
+    margin: 0 20% 0 20%;
+}
+
+.login-form h3 {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: flex;
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.input-group .forgot-password {
+    font-size: 12px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.input-group .forgot-password:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+}
+
+
+/*add customer*/
+
+.home-logo-img{
+    width: 10%; /* Set the width to 50% of its parent */
+    display: block;
+    margin-bottom: 20px;
+}
+
+.customer-nav-depth-4-logo{
+    width: 100%;
+    
+}
+
+.customer-nav-depth-3-links{
+    width: 95%;
+    margin-top: 25px;
+    padding: 20px;
+}
+
+.customer-nav-depth-4-links ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.customer-nav-depth-4-links ul li {
+    margin-bottom: 10px;
+
+}
+
+.customer-nav-depth-4-links ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: black;
+    padding: 5px 10px;
+    display: block;
+
+}
+
+.customer-nav-depth-4-links ul li a:hover {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+
+.container-depth-2-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.form-field-add-customer {
+  margin-bottom: 10px;
+}
+
+.add-customer-form{
+    width: 100%;
+}
+
+.form-field-add-customer label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-field-add-customer input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  width:50%;
+  color: #000;
+}
+
+.form-field-add-customer input::placeholder {
+  color: rgba(0, 0, 0, 0.5); /* set placeholder text color to 50% opacity */
+}
+
+.button-add-customer {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-items: center;
+}
+
+
+.button-add-customer:hover {
+    background-color: #0056b3;
+}
+
+
+
+/*View Customer*/
+.container-depth-2-head-cst {
+    margin-bottom: 20px;
+    margin-top:25px ;
+}
+
+.container-depth-2-head-cst h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #000;
+}
+
+.container-depth-2-search-cst {
+    display: flex;
+    margin-bottom: 50px;
+}
+.container-depth-2-content-cst {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 5%;
+    
+}
+
+.container-depth-2-content-cst table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.container-depth-2-content-cst table th,
+.container-depth-2-content-cst table td {
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    height: 5%;
+}
+
+.container-depth-2-content-cst table th {
+    background-color: #f9f9f9;
+    font-weight: normal;
+}
+
+.container-depth-2-content-cst table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.container-depth-2-content-cst table td a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.container-depth-2-content-cst table td a:hover {
+    text-decoration: underline;
+}
+
+/*Add medicine*/
+.medicine-nav-depth-4-logo{
+    width: 100%;
+    
+}
+
+.medicine-nav-depth-3-links{
+    width: 95%;
+    margin-top: 25px;
+    padding: 20px;
+}
+
+.medicine-nav-depth-4-links ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.medicine-nav-depth-4-links ul li {
+    margin-bottom: 10px;
+
+}
+
+.medicine-nav-depth-4-links ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: black;
+    padding: 5px 10px;
+    display: block;
+
+}
+
+.medicine-nav-depth-4-links ul li a:hover {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+
+.container-depth-2-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.form-field-add-customer {
+  margin-bottom: 10px;
+}
+
+
+.add-medicine-form{
+    width: 100%;
+}
+
+.form-field-add-medicine label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-field-add-medicine input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  width:50%;
+  color: #000;
+}
+
+.form-field-add-medicine input::placeholder {
+  color: rgba(0, 0, 0, 0.5); /* set placeholder text color to 50% opacity */
+}
+
+.button-add-medicine {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-items: center;
+}
+
+
+.button-add-medicine:hover {
+    background-color: #0056b3;
+}

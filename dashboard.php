@@ -2,7 +2,7 @@
 	<head>
 		<title>Dashboard Try</title>
 		<link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
-		<link rel="stylesheet" type="text/css" href="style-test.css">
+		<link rel="stylesheet" type="text/css" href="css/dashboard.css">
 	</head>
 	<body>
  <script src="script.js"></script>
@@ -17,9 +17,9 @@
 						<div class="nav-depth-4-links">
 							<ul class="nav-links">
 				                <li><a href="#">Home</a></li>
-				                <li><a href="#">Transactions</a></li>
+				                <li><a href="invoice_generation.php">Transactions</a></li>
 				                <li><a href="add_customer.php">Customer</a></li>
-				                <li><a href="#">Product</a></li>
+				                <li><a href="add_medicine.php">Product</a></li>
 				                <li><a href="#">Supplier</a></li>
             				</ul>
 						</div>

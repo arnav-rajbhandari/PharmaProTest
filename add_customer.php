@@ -2,7 +2,7 @@
   <head>
     <title>Dashboard Try</title>
     <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
-    <link rel="stylesheet" type="text/css" href="style-test.css">
+    <link rel="stylesheet" type="text/css" href="css/customer.css">
   </head>
   <body>
             <?php
@@ -38,32 +38,32 @@
 
      <script src="script.js"></script>
 
-    <div class="depth-0">
-      <div class="nav-depth-1">
-        <div class="nav-depth-2">
+    <div class="customer-depth-0">
+      <div class="customer-nav-depth-1">
+        <div class="customer-nav-depth-2">
           <div class="customer-nav-depth-3-links">
             <div class="customer-nav-depth-4-logo">
-              <a href="#"><img src="home.png" class="home-logo-img"></a>
+              <a href="dashboard.php"><img src="home.png" class="home-logo-img"></a>
             </div>
-            <div class="nav-depth-4-links">
-              <ul class="nav-links">
+            <div class="customer-nav-depth-4-links">
+              <ul class="customer-nav-links">
                         <li><a href="add_customer.php ?>">Add Customer</a></li>
                         <li><a href="view_customer.php">View Customer</a></li>
                         <li><a href="edit_customer.php">Edit Customer</a></li>
                     </ul>
             </div>
           </div>
-          <div class="nav-depth-3-logout">
+          <div class="customer-nav-depth-3-logout">
             <a href="login.php">Log out</a>
           </div>
         </div>
       </div>
 
-            <div class="container-depth-1">
-            <div class="container-depth-2-head">
+            <div class="customer-container-depth-1">
+            <div class="customer-container-depth-2-head">
             <h1>Add a new customer</h1>
             </div>
-            <div class="container-depth-2-form">
+            <div class="customer-container-depth-2-form">
               <form class="add-customer-form" method="post">
                 <div class="form-field-add-customer">
                   <label for="customer-name">Customer Name</label>

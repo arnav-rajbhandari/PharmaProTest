@@ -2,7 +2,7 @@
 <head>
     <title>Login</title>
     <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
-    <link rel="stylesheet" type="text/css" href="style-test.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
 <body>
      <script src="script.js"></script>
